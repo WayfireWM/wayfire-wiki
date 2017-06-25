@@ -162,7 +162,7 @@ Duration, in milliseconds, of the animation.
 
 ## grid
 
-Provides basic tiling support. With it you can "tile" windows in one of the four corners of the screen or in the left/right/top/bottom half, and also maximize/unmaximize them.
+Provides basic tiling support. With it you can "tile" windows in one of the four corners of the screen or in the left/right/top/bottom half, and also maximize/unmaximize them. Also works in conjunction with the move plugin to enable snap functionality.
 Important: this plugin is required for adjusting window size when it is maximized/fullscreened, otherwise those won't work.
 
 Options:

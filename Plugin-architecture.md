@@ -4,7 +4,7 @@ In wayfire, each output is independent of the others and runs its own set of plu
 ## Interaction with the core
 There are three ways in which a plugin might interact with the core and/or other plugins:
 1. Through a key/button/touch binding
-1. Responding to a signal
+1. Responding to/Emitting a signal
 2. Attaching a hook to the rendering process.
 
 ### Bindings

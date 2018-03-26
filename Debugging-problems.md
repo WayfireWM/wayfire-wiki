@@ -6,7 +6,7 @@ First **identify which component causes the bug**. It can be:
 **Important**: If the bug is actually a crash, recompile with debugging enabled:
 ```
 cd build
-cmake ../ -DCMAKE_BUILD_TYPE=Debug -DUSE_GLES32=False
+cmake ../ -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DUSE_GLES32=False
 make && sudo make install
 ```
 

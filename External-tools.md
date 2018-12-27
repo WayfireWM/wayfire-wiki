@@ -32,18 +32,39 @@ wf-recorder is a very simple screen recorder. In contrast to wlstream it doesn't
 
 # Sound volume control
 
+1. ### amixer
+
 More often than not we want to be able to control the sound volume with a keybinding. Set the following in the `[command]` section:
 
 ```
-binding_3 = KEY_VOLUMEUP | BTN_EXTRA
-command_3 = amixer -q sset Master 5%+
-binding_4 = KEY_VOLUMEDOWN | BTN_SIDE
-command_4 = amixer -q sset Master 5%-
-binding_5 = KEY_MUTE
-command_5 = amixer -q sset Master toggle                                   
+binding_volup   = KEY_VOLUMEUP | BTN_EXTRA
+command_volup   = amixer -q sset Master 5%+
+binding_voldown = KEY_VOLUMEDOWN | BTN_SIDE
+command_voldown = amixer -q sset Master 5%-
+binding_mute    = KEY_MUTE
+command_mute    = amixer -q sset Master toggle                                   
 ```
 
-I have also set up the `BTN_EXTRA`/`BTN_SIDE` buttons to also control sound volume, you can adjust bindings in any way you want. If you want a GUI indication, there is a WIP here: https://github.com/WayfireWM/wf-sound-control. It supports increase/decrease of volume, also setting volume with the mouse, but doesn't support mute.
+I have also set up the `BTN_EXTRA`/`BTN_SIDE` buttons to also control sound volume, you can adjust bindings in any way you want.
+
+2. ### [wf-sound-control](https://github.com/WayfireWM/wf-sound-control)
+
+If you want a GUI indication for sound volume, there is a WIP here: https://github.com/WayfireWM/wf-sound-control. It supports increase/decrease of volume, also setting volume with the mouse, but doesn't support mute. How to use:
+```
+binding_volup   = KEY_VOLUMEUP | BTN_EXTRA
+command_volup   = wf-sound-control inc 5
+binding_voldown = KEY_VOLUMEDOWN | BTN_SIDE
+command_voldown = wf-sound-control dec 5
+```
+
+3. ### Pulseaudio
+
+```
+binding_volup   = KEY_VOLUMEUP | BTN_EXTRA
+command_volup   = pactl set-sink-volume 0 +5%
+binding_voldown = KEY_VOLUMEDOWN | BTN_SIDE
+command_voldown = pactl set-sink-volume 0 -5%
+```
 
 #  Set screen brightness
 

@@ -15,20 +15,20 @@ binding_slurp = <super> <shift> KEY_S
 command_slurp = slurp | grim -g - ~/Pictures/slurped.png
 ```
 
-Now you can take a screenshot with `<super> KEY_S` and it will be saved to `~/Pictures/`. The second binding demonstrates how to use grim together with slurp, for more info see grim's [README.md](https://github.com/emersion/grim) 
+Now you can take a screenshot with `<super> KEY_S` and it will be saved to `~/Pictures/`. The second binding demonstrates how to use grim together with slurp to interactively select a subregion of the screen to screenshot, for more info see grim's [README.md](https://github.com/emersion/grim) 
 
-2. ### [wlstream](https://github.com/atomnuker/wlstream)
+2. ### [wf-recorder](https://github.com/ammen99/wf-recorder)
 
-wlstream is a screen recorder using `ffmpeg >= 4.0`. It also supports streaming with audio (for example to twitch, youtube ...). Here's an example command for streaming to twitch:
+wf-recorder's goal is to be a very simple recording client, while working out-of-the-box on as many setups as possible. Follow the installation instructions in the readme, run `wf-recorder` and press `Ctrl-C` to stop recording.
+
+3. ### [wlstream](https://github.com/atomnuker/wlstream)
+
+wlstream is a bit more complex screen recorder using `ffmpeg >= 4.0`, however it can be a bit difficult to use and might not work on all setups. It supports screen recording, and streaming with audio (for example to twitch, youtube ...). Here's an example command for streaming to twitch:
 
 ```wlstream 17 vaapi /dev/dri/renderD128 libx264 nv12 12 rtmp://live-prg.twitch.tv/app/live_<your tokens here>```
 
 Change the `17` to the output ID on your system (`wlstream` will print the info for you).
 You may have to adjust the `/dev/dri/renderD` node to what is present on your system. You also might need to adjust the formats used by `wlstream` (the `libx264`, `nv12` and `12` parameters, if those aren't supported by your system).
-
-3. ### [wf-recorder](https://github.com/ammen99/wf-recorder)
-
-wf-recorder is a very simple screen recorder. In contrast to wlstream it doesn't support network streaming or audio, but it should be much more portable and easy to use. Follow the installation instructions in the readme, run `wf-recorder` and press `Ctrl-C` to stop recording.
 
 # Sound volume control
 

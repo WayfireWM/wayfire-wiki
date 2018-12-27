@@ -45,8 +45,9 @@ command_5 = amixer -q sset Master toggle
 
 I have also set up the `BTN_EXTRA`/`BTN_SIDE` buttons to also control sound volume, you can adjust bindings in any way you want. If you want a GUI indication, there is a WIP here: https://github.com/WayfireWM/wf-sound-control. It supports increase/decrease of volume, also setting volume with the mouse, but doesn't support mute.
 
-# [Light](https://github.com/haikarainen/light) to set brightness
+#  Set screen brightness
 
+### [Light](https://github.com/haikarainen/light)
 Light is a console program to control brightness. You can of course use any alternative programs, there are many, it is just that this one works best for me. It is useful to set this as a keybinding - go to the `[command]` section and add the following entries:
 
 ```

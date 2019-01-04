@@ -52,5 +52,7 @@ Activator bindings combine multiple key/button/touch bindings, so that a single 
 
 The documentation for individual options has been split into multiple pages:
 
-TODO: add pages
+1. [Core options](https://github.com/WayfireWM/wayfire/wiki/Core-options)
+
+TODO: add other pages
 

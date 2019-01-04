@@ -33,6 +33,20 @@ Keys and buttons have names as defined in `/usr/include/linux/input-event-codes.
 
 Examples: `option = <super> <shift> KEY_F`, `option = <ctrl> BTN_RIGHT`
 
+4. ### Touch and axis bindings
+These are represented via a modifier combination, for ex. `option = <alt>` means alt+scroll for an axis binding.
+
+5. ### Touch gesture bindings
+Represent a touchscreen gesture (in the future also touchpad support is planned)
+
+Examples:
+```
+option = swipe 3 up        #swipe up with 3 fingers <br/>
+option = pinch 3 in        # pinch in(can also be set with out) with 3 fingers <br/>
+option = edge-swipe 4 left # swipe left with 4 fingers, starting from the edge of the screen <br/>
+```
+6. ### Activator bindings
+Activator bindings combine multiple key/button/touch bindings, so that a single action can be triggered from multiple bindings. Example: `toggle = <alt> BTN_EXTRA | pinch out 3 | <alt> KEY_E`
 
 # Currently available options
 

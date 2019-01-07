@@ -80,7 +80,27 @@ command_brightness_up = sudo light -p -A 5
 
 Here I have installed `light` to `/usr/bin` and have configured `sudo` to not ask password for `light`. An alternative would be to properly manage brightness permissions. After it, you can use the brightness up/down keys on your keyboard to control brightness. Of course you can change the bindings to some other keys.
 
+# Notifications
 
+### [Mako](https://github.com/emersion/mako)
 
+Setting this up is really simple, just run `mako` in the `[autostart]` section:
 
+```
+[autostart]
+mako = /usr/bin/mako
+...
+```
+Of course, adjust the `/usr/bin` part to where the `mako` binary on you system is.
 
+# Screen color temperature (gamma correction)
+
+### [Redshift](https://github.com/jonls/redshift/pull/663)
+
+Redshift-like functionality requires special protocols, support for those still hasn't been merged in upstream `redshfit`, so use the version from the link above. Setup is similar to mako:
+
+```
+[autostart]
+redshift = redshift -m wayland # -m tells it to use the wayland backend
+...
+```

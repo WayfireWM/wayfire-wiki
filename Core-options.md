@@ -85,7 +85,7 @@ Sets the position of the output in the global compositor space. Outputs which do
 
 To properly calculate the output size in the global compositor space, you need to take its resolution, divide by scale and then apply the rotation. You can use a little "trick" to save yourself the hassle of computing layouts if you have just 2 monitors arranged horizontally: just specify the layout of the left one to `0,0` and the other will be automatically arranged to the right.
 
-# [workarounds]
+# `[workarounds]`
 
 This is a section which contains some hacks that might be required to make things work. Fortunately there is only a single option supported for now.
 

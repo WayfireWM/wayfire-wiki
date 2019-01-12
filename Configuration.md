@@ -53,6 +53,8 @@ Activator bindings combine multiple key/button/touch bindings, so that a single 
 The documentation for individual options has been split into multiple pages:
 
 1. [Core options](https://github.com/WayfireWM/wayfire/wiki/Core-options)
+2. [Basic plugins](https://github.com/WayfireWM/wayfire/wiki/Basic-plugins)
+3. TBD: [Desktop effects](https://github.com/WayfireWM/wayfire/wiki/Desktop-effects)
+4. TBD: [Misc plugins](https://github.com/WayfireWM/wayfire/wiki/Misc-plugins)
 
-TODO: add other pages
 

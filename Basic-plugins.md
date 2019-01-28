@@ -3,7 +3,7 @@ Each plugin is listed with its config section. To enable a plugin, add its name 
 See the [configuration](https://github.com/WayfireWM/wayfire/wiki/Configuration) for more details on the bindings format.
 
 
-# `[autostart]`
+## `[autostart]`
 
 The autostart plugin lets the user specify what commands should be run whenever Wayfire starts.
 
@@ -15,7 +15,7 @@ background = /usr/bin/wf-background
 panel = /usr/bin/wf-panel
 ```
 
-# `[command]`
+## `[command]`
 
 The command plugin lets the user associate button/key/touch bindings with different commands.
 The format is:
@@ -39,7 +39,7 @@ binding_lock = <super> KEY_L
 command_lock = swaylock
 ```
 
-# `[move]`
+## `[move]`
 
 A plugin to move windows by dragging them.
 
@@ -64,14 +64,14 @@ Setting this to 0 disables moving a window after it has been snapped to a slot. 
 Has effect only with `enable_snap_off = 1`. When attempting to move a snapped window, this option requires
 the user to move at least `N` pixels before the window actually moves. Default: `0`
 
-# `[resize]`
+## `[resize]`
 Provides a binding to start an interactive resize from any part of the window (not just edges).
 
 1. `activate = <button binding>`
 
 The button binding to start the interactive resize. Default: `<super> <shift> BTN_LEFT`
 
-# `[vswitch]`
+## `[vswitch]`
 
 Switch workspaces in a grid.
 

@@ -1,6 +1,6 @@
 To create a functional desktop, more than a compositor is needed. In this page I've listed some useful programs that belong to a DE and I've described how I use them with Wayfire. Many of them require the `command` plugin, which is enabled by default.
 
-# Screenshots, screen recording and screen casting
+## Screenshots, screen recording and screen casting
 
 As a wlroots-based compositor Wayfire supports `wlr-screencopy-v1` and `wlr-export-dmabuf-v1` protocols, so any programs that use them should work. Here are some examples:
 
@@ -30,7 +30,7 @@ wlstream is a bit more complex screen recorder using `ffmpeg >= 4.0`, however it
 Change the `17` to the output ID on your system (`wlstream` will print the info for you).
 You may have to adjust the `/dev/dri/renderD` node to what is present on your system. You also might need to adjust the formats used by `wlstream` (the `libx264`, `nv12` and `12` parameters, if those aren't supported by your system).
 
-# Sound volume control
+## Sound volume control
 
 1. ### amixer
 
@@ -66,7 +66,7 @@ binding_voldown = KEY_VOLUMEDOWN | BTN_SIDE
 command_voldown = pactl set-sink-volume 0 -5%
 ```
 
-#  Set screen brightness
+##  Set screen brightness
 
 ### [Light](https://github.com/haikarainen/light)
 Light is a console program to control brightness. You can of course use any alternative programs, there are many, it is just that this one works best for me. It is useful to set this as a keybinding - go to the `[command]` section and add the following entries:
@@ -80,7 +80,7 @@ command_brightness_up = sudo light -p -A 5
 
 Here I have installed `light` to `/usr/bin` and have configured `sudo` to not ask password for `light`. An alternative would be to properly manage brightness permissions. After it, you can use the brightness up/down keys on your keyboard to control brightness. Of course you can change the bindings to some other keys.
 
-# Notifications
+## Notifications
 
 ### [Mako](https://github.com/emersion/mako)
 
@@ -93,7 +93,7 @@ mako = /usr/bin/mako
 ```
 Of course, adjust the `/usr/bin` part to where the `mako` binary on you system is.
 
-# Screen color temperature (gamma correction)
+## Screen color temperature (gamma correction)
 
 ### [Redshift](https://github.com/jonls/redshift/pull/663)
 

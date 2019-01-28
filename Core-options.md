@@ -1,4 +1,4 @@
-# `[core]`
+## `[core]`
 
 1. `plugins = viewport_impl move resize wobbly cube ...`
 
@@ -8,7 +8,7 @@ A space-separated list of enabled plugins. Due to current limitations, the `view
 
 Integer options, the number of horizontal/vertical workspaces. For now it can't be changed at runtime.
 
-# `[input]`
+## `[input]`
 
 1. `natural_scroll/tap_to_click/disable_while_typing = 1/0`
 
@@ -48,12 +48,12 @@ Some devices like built-in touchscreens should be mapped to exactly one output (
 [device_name]
 output = <output_name>
 
-# Example:
+## Example:
 [SYNA7501:00 06CB:16CA]
 output = eDP-1
 ```
 
-# Output configuration
+## Output configuration
 
 To configure outputs, you first need to figure out each output's name. They are usually the same as `xrandr` output names. If you are unsure which output names are on your system, check the log. There you can also find information about the supported modes.
 
@@ -85,7 +85,7 @@ Sets the position of the output in the global compositor space. Outputs which do
 
 To properly calculate the output size in the global compositor space, you need to take its resolution, divide by scale and then apply the rotation. You can use a little "trick" to save yourself the hassle of computing layouts if you have just 2 monitors arranged horizontally: just specify the layout of the left one to `0,0` and the other will be automatically arranged to the right.
 
-# `[workarounds]`
+## `[workarounds]`
 
 This is a section which contains some hacks that might be required to make things work. Fortunately there is only a single option supported for now.
 

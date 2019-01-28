@@ -1,4 +1,4 @@
-**Those screenshots are outdated. See the [Wayfire youtube playlist](https://www.youtube.com/playlist?list=PLb7YRKEhWEBUIoT-a29UoJW9mhfzjpNle) for some quick demos of what wayfire can do.**
+## These screenshots are outdated. See the [Wayfire youtube playlist](https://www.youtube.com/playlist?list=PLb7YRKEhWEBUIoT-a29UoJW9mhfzjpNle) for some quick demos of what wayfire can do.**
 
 Here are screenshots from Wayfire:
 

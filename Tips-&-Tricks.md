@@ -15,3 +15,8 @@ sudo -E $@
 xhost -SI:localuser:root
 
 ```
+## `Java applications in xwayland`
+The following needs to be set for certain java applications to display correctly when run in wayfire.
+```
+_JAVA_AWT_WM_NONREPARENTING=1
+```

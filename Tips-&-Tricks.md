@@ -20,9 +20,3 @@ Use the following command to show /dev/video0 in a native window. Note that glim
 ```
 gst-launch-1.0 -v v4l2src device=/dev/video0 ! glimagesink
 ```
-
-## Record audio with wf-recorder
-Use the following command to record video with audio. It records all programs playing audio via pulse and the default pulse input (mic).
-```
-wf-recorder -a
-```

@@ -13,3 +13,10 @@ sudo -E $@
 
 # disable root access after application terminates
 xhost -SI:localuser:root
+
+```
+## Native webcam with gst-launch-1.0 (gstreamer)
+Use the following command to show /dev/video0 in a native window. Note that glimagesink must be available.
+```
+gst-launch-1.0 -v v4l2src device=/dev/video0 ! glimagesink
+```

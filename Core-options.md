@@ -59,9 +59,13 @@ To configure outputs, you first need to figure out each output's name. They are 
 
 Each output has its own section in the config name. The section name is the same as the output name. Each of the following options should be put in the output section for the output that you want to configure.
 
-1. `mode = width x height @ refresh` or `mode = default`
+1. `mode = width x height @ refresh` or `mode = default` or `mode = off` or `mode = mirror <output>`
 
-Use the given mode. Refresh rate can be in `Hz` or `mHz`. Example: `mode = 1920x1080@60`
+The first variant tells Wayfire to use the given mode. Refresh rate can be in `Hz` or `mHz`. Example: `mode = 1920x1080@60`. In the second case, the mode is detected automatically.
+
+When `mode = off` is set, the output is turned off and left unused by Wayfire.
+
+When `mode = mirror <output>`, if `<output>` is a valid name of another output, the output is used as a mirror of the specified output.
 
 2. `custom_mode_N = modeline`
 

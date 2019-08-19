@@ -20,3 +20,8 @@ Use the following command to show /dev/video0 in a native window. Note that glim
 ```
 gst-launch-1.0 -v v4l2src device=/dev/video0 ! glimagesink
 ```
+
+## Wine
+If you are having trouble with wine applications, such as input not responding or tearing windows, check the following.
+- Make sure xwayland is enabled in wayfire meson configure output and in wayfire.ini [core] xwayland = 1
+- In winecfg in the Graphics tab, disable 'Allow the window manager to decorate the windows', disable 'Allow the window manager to control the windows' and enable 'Emulate a virtual desktop'

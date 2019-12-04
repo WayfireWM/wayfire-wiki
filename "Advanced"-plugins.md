@@ -2,11 +2,13 @@
 
 The simple-tile plugin provides some tiling features in Wayfire, inspired by i3. The plugin is meant to contain only the basics. If you want something fancier, you're welcome to build your own tiling WM as a Wayfire plugin.
 
+**simple-tile requires matcher plugin!**
+
 simple-tile has several options:
 
-1. `tile_by_default = 1`
+1. `tile_by_default = any`
 
-Whether to automatically add windows to the tiling grid when they are mapped.
+Controls which windows are added to the tiling grid by default. A matcher expression.
 
 2. `button_move = <super> BTN_LEFT`
 

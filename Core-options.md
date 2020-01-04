@@ -52,3 +52,14 @@ output = <output_name>
 [SYNA7501:00 06CB:16CA]
 output = eDP-1
 ```
+
+## `[workarounds]`
+
+This is a section which contains some hacks that might be required to make things work. Fortunately there is only a single option supported for now.
+
+1. `app_id_mode = stock/gtk-shell/full`
+
+TL;DR: if you use only `wf-dock` as task manager/dock, set to `full`. Otherwise, try `stock` and `gtk-shell`, and use whichever works better for you.
+
+In contrast to X, in wayland clients like taskbars, docks, etc. can't just query the icon of a window. They need to obtain it by using some heuristics involving the app-id. However, in GTK3 there is a bug where the application sometimes reports the wrong app-id. There is a custom protocol(`gtk-shell1`) which can be used to get the correct app-id. The situation will get better in GTK4 where the bug is fixed, but in the meantime we somehow need to supply the dock/taskmanager with both app-ids (the potentially wrong one and the potentially missing one from `gtk-shell1`). This isn't possible with the regular protocols, that's why `wayfire` and `wf-dock` use a custom format (when `app_id_mode=full`) so that both app-ids can be sent at the same time. This would unfortunately break clients that are unaware of this hack. That's why it's up to the user of Wayfire to select whichever mode works best for them, depending on what clients they use.
+

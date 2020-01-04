@@ -5,7 +5,7 @@
 
 Wayfire is managed through a config file, typically located in `~/.config/wayfire.ini`. The location can be overriden using the `-c <config file>` argument when staring Wayfire.
 
-Probably the easiest way to edit the configuration options is the WIP [Wayfire config manager (WCM)](https://github.com/WayfireWM/wcm). However, it is still missing many important options (like output configuration and the `command` plugin), so for the time being you most probably want to edit the config file directly.
+Probably the easiest way to edit the configuration options is the WIP [Wayfire config manager (WCM)](https://github.com/WayfireWM/wcm). However, it is still missing many important options (like output configuration), so for the time being you most probably want to edit the config file directly.
 
 ## Config file structure
 The configuration file follows a simple `ini` file format. It is divided into sections, which consist of multiple options, for ex.

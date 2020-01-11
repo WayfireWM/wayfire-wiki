@@ -15,7 +15,19 @@ binding_slurp = <super> <shift> KEY_S
 command_slurp = slurp | grim -g - ~/Pictures/slurped.png
 ```
 
-Now you can take a screenshot with `<super> KEY_S` and it will be saved to `~/Pictures/`. The second binding demonstrates how to use grim together with slurp to interactively select a subregion of the screen to screenshot, for more info see grim's [README.md](https://github.com/emersion/grim)
+Now you can take a screenshot with `<super> KEY_S` and it will be saved to
+`~/Pictures/`. The second binding demonstrates how to use grim together with
+slurp to interactively select a subregion of the screen to screenshot, for more
+info see grim's [README.md](https://github.com/emersion/grim)
+
+You can also use `wl-clipboard` in combination with `grim` and `slurp` capture a screenshot to clipboard. Put this entry in `[command]` section.
+
+```
+binding_screenshot_clip = <super> <ctrl> KEY_S
+command_screenshot_clip = grim -g \"$(slurp)" - | wl-copy
+```
+
+To use PrintScreeen, replace `<super> KEY_S` with `KEY_PRINT` in every entry above. (Please note the lack of <super> on the latter keybind)
 
 2. ### [wf-recorder](https://github.com/ammen99/wf-recorder)
 

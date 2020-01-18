@@ -15,12 +15,6 @@ sudo -E $@
 xhost -SI:localuser:root
 ```
 
-## Native webcam with gst-launch-1.0 (gstreamer)
-Use the following command to show /dev/video0 in a native window. Note that glimagesink must be available.
-```
-gst-launch-1.0 -v v4l2src device=/dev/video0 ! glimagesink
-```
-
 ## Wine
 If you are having trouble with wine applications, such as input not responding, tearing windows, or buggy mouse behavior in some fullscreen games check the following:
 - Make sure xwayland is enabled in wayfire meson configure output and in wayfire.ini [core] xwayland = 1

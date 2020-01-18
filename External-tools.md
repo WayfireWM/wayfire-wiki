@@ -137,3 +137,12 @@ Redshift-like functionality requires special protocols, support for those still 
 redshift = redshift -m wayland # -m tells it to use the wayland backend
 ...
 ```
+
+## Native webcam with gst-launch-1.0 (gstreamer)
+
+### [gstreamer](https://gitlab.freedesktop.org/gstreamer)
+
+Use the following command to show /dev/video0 in a native window. Note that glimagesink must be available.
+```
+gst-launch-1.0 -v v4l2src device=/dev/video0 ! glimagesink
+```

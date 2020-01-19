@@ -152,3 +152,9 @@ gst-launch-1.0 -v v4l2src device=/dev/video0 ! glimagesink
 ### [wlogout](https://github.com/ArtsyMacaw/wlogout)
 
 Wayfire supports layer shell protocol, which means it is possible to use a program such as wlogout to log out and shut down.
+
+## Remote Desktop
+
+### [wayvnc](https://github.com/any1/wayvnc)
+
+With virtual pointer support, programs like wayvnc are possible. No special wayfire configuration is required.
